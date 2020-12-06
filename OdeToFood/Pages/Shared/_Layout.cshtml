@@ -30,7 +30,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <!--asp-page tag helper helps to render html on the server. 
+                        It sets the href oe anchor tag to point to razor page that I have in the project.-->
                     <li><a asp-page="/Index">Home</a></li>
+                    <li><a asp-page="/Restaurants/List">Restaurants</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Contact">Contact</a></li>
                 </ul>

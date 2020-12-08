@@ -20,9 +20,18 @@ namespace OdeToFood.Pages.Restaurants
             this.restaurantData = restaurantData;
         }
 
-        public void OnGet(int restaurantId)
+        // IActionResult returns the result of the OnGet action
+        // Page implements IActionResult and returns a PageResult        
+        public IActionResult OnGet(int restaurantId)
         {
             Restaurant = restaurantData.GetById(restaurantId);
+
+            if (Restaurant == null)
+            {
+                return RedirectToPage("./NotFound");
+            }
+
+            return Page();
         }
     }
 }

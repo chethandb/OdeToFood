@@ -20,10 +20,19 @@ namespace OdeToFood.Pages.Restaurants
     public class ListModel : PageModel
     {
         private readonly IConfiguration config;
-        private readonly IRestaurantData restaurantData;
+        private readonly IRestaurantData restaurantData;        
 
         public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
+
+        // ------------------------ BindProperty -----------------------------------------------------------------------------------
+        // BindProperty tells the ASP.NET core framework when you're instantiating this class and you're getting ready to execute 
+        // a method on this class to process an HTTP request, this particular property should recieve information from the request.
+        // By default the BindProperty works only for Post, so by setting the flag  SupportsGet, we are asking it to work for Get request as well.
+        //  ---------------------------------------------------------------------------------------------------------------------
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
 
         public ListModel(IConfiguration config, 
                          IRestaurantData restaurantData)
@@ -35,7 +44,7 @@ namespace OdeToFood.Pages.Restaurants
         public void OnGet()
         {
             Message = config["Message"];
-            Restaurants = restaurantData.GetAll();
+            Restaurants = restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }
 }

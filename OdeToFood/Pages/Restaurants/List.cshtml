@@ -3,7 +3,27 @@
 @{
 }
 
+@{
+    ViewData["Title"] = "Restaurants";
+}
+
 <h1>Restaurants</h1>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <!-------------------------asp-for-------------------------------------------------------------------
+               tag helper for two way binding
+            ------------------------------------------------------------------------------------------------------>
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
 
 <table class="table">
     @foreach (var restaurant in Model.Restaurants)
@@ -12,6 +32,18 @@
             <td>@restaurant.Name</td>
             <td>@restaurant.Location</td>
             <td>@restaurant.Cuisine</td>
+            <!-------------------------asp-route-data-------------------------------------------------------------------
+               this tag helper is *dynamic*
+               you include the name of the parameter that you wnat to pass along
+                you can add as many as parameters you want to that anchor tag to pass additinal parameters
+            ------------------------------------------------------------------------------------------------------>
+            <td>
+                <a class="btn btn-lg"
+                   asp-page="./Detail"
+                   asp-route-restaurantId="@restaurant.Id">
+                    <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+            </td>
         </tr>
     }
 </table>

@@ -1,4 +1,9 @@
-﻿@page
+﻿@page "{restaurantId:int}"
+
+@* By the above we are maing sure this page is reached by adding an integer as a third element, which is needed *@
+@* asp-route attribute makes sure to generate the relevant url format as needed *@
+@* "{restaurantId?:int}"  makes the id restaurantId optional*@
+
 @model OdeToFood.Pages.Restaurants.DetailModel
 @{
     ViewData["Title"] = "Detail";

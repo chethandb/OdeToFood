@@ -1,7 +1,7 @@
 # OdeToFood
 Scott's OdeToFood ASP.NET CORE
 
-## Drilling into Data
+## Module 1 - Drilling into Data
 - Creating the New Project
 - Editing Razor Pages
 - Adding a Razor Page
@@ -13,7 +13,7 @@ Scott's OdeToFood ASP.NET CORE
 - Building a Page Model
 - Displaying a Table of Restaurants
 
-## Working with Models and Model Binding
+## Module 2 - Working with Models and Model Binding
 - Working with HTML Forms
 - Building a Search Form
 - Finding Restaurants by Name

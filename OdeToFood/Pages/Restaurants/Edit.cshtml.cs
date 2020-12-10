@@ -42,10 +42,14 @@ namespace OdeToFood.Pages.Restaurants
 
         public IActionResult OnPost()
         {
+            if (ModelState.IsValid)
+            {
+                Restaurant = restaurantData.Update(Restaurant);
+                restaurantData.Commit();
+            }
+
             // we have to make sure to populate the select list for Post as well 
-            Cuisines = htmlHelper.GetEnumSelectList<CuisineType>();
-            Restaurant = restaurantData.Update(Restaurant);
-            restaurantData.Commit();
+            Cuisines = htmlHelper.GetEnumSelectList<CuisineType>();            
             return Page();
         }
     }

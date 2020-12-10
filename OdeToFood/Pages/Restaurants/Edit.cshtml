@@ -21,10 +21,12 @@
         <label asp-for="Restaurant.Location"></label>
         <input asp-for="Restaurant.Location" class="form-control" />
     </div>
+    <!-- asp-items takes in value form various sources and hence we have to specify Model.[PropertyName]
+         and hence not same as asp-for where it intuitively assumes source already as Model -->
     <div class="form-group">
         <label asp-for="Restaurant.Cuisine"></label>
-        <select class="form-control" asp-for="Restaurant.Cuisine" 
-                                     asp-items="Model.Cuisines" >                                    
+        <select class="form-control" asp-for="Restaurant.Cuisine"
+                asp-items="Model.Cuisines">
         </select>
     </div>
 

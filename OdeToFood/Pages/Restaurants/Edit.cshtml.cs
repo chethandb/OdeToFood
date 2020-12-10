@@ -15,6 +15,8 @@ namespace OdeToFood.Pages.Restaurants
         private readonly IRestaurantData restaurantData;
         private readonly IHtmlHelper htmlHelper;
 
+        // here we just want the binding to work for Post and hence we are not setting any other flag
+        [BindProperty]
         public Restaurant Restaurant { get; set; }
         public IEnumerable<SelectListItem> Cuisines { get; set; }
 
@@ -35,6 +37,13 @@ namespace OdeToFood.Pages.Restaurants
                 return RedirectToPage("./NotFound");
             }
 
+            return Page();
+        }
+
+        public IActionResult OnPost()
+        {
+            Restaurant = restaurantData.Update(Restaurant);
+            restaurantData.Commit();
             return Page();
         }
     }

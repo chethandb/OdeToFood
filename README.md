@@ -25,3 +25,15 @@ Scott's OdeToFood ASP.NET CORE
 - Fetching Restaurants by ID
 - Handling Bad Requests
 - Summary
+
+## Module 3 - Editing Data with Razor Pages
+- Creating the Restaurant Edit Page
+- Building an Edit Form with Tag Helpers
+- Model Binding an HTTP POST Operation
+- Adding Validation Checks
+- Using Model State and Showing Validation Errors
+- Following the POST-GET-REDIRECT Pattern
+- Building a Create Restaurant Page
+- Adding Create to the Data Access Service
+- Handling Create vs. Update Logic
+- Confirming the Last Operation

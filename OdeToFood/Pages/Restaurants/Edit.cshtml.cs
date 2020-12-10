@@ -46,6 +46,9 @@ namespace OdeToFood.Pages.Restaurants
             {
                 Restaurant = restaurantData.Update(Restaurant);
                 restaurantData.Commit();
+                // implement post redirect get pattern - PRG 
+                // this makes sure user is left on a safe page where they can refresh and wouldn't change any data
+                return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id });
             }
 
             // we have to make sure to populate the select list for Post as well 

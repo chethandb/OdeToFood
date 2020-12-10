@@ -57,14 +57,22 @@ namespace OdeToFood.Pages.Restaurants
                 return Page();
             }
 
+            var addedRestaurant = false;
+
             if (Restaurant.Id > 0)
-            {
+            {                
                 Restaurant = restaurantData.Update(Restaurant);
             }
             else
             {
+                addedRestaurant = true;
                 restaurantData.Add(Restaurant);
             }
+
+            // TempData is like dictionary of Key Value pairs
+            // its just temporary
+            // any request to this displays and its forgotten once done
+            TempData["Message"] = addedRestaurant ? "New Restaurant info added!" : "Sucessfully updated Restaurant!";
 
             restaurantData.Commit();
             // implement post redirect get pattern - PRG 

@@ -13,6 +13,11 @@ namespace OdeToFood.Pages.Restaurants
     {
         private readonly IRestaurantData restaurantData;
 
+        // to bind to TempData
+        // here aps .net will look for Key value Message inside TempData data structure 
+        [TempData]
+        public string Message { get; set; }
+
         public Restaurant Restaurant { get; set; }
 
         public DetailModel(IRestaurantData restaurantData)

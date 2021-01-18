@@ -37,3 +37,15 @@ Scott's OdeToFood ASP.NET CORE
 - Adding Create to the Data Access Service
 - Handling Create vs. Update Logic
 - Confirming the Last Operation
+
+## Module 4 - Working with SQL Server and the Entity Framework Core
+- Installing the Entity Framework
+- Implementing an Entity Framework DbContext
+- Using the Entity Framework Tools
+- Using Other Databases and Tools
+- Adding Connection Strings and Registering Services
+- Adding Database Migrations
+- Running Database Migrations
+- Implementing a Data Access Service
+- Saving and Commiting Data
+- Modifying the Service Registration

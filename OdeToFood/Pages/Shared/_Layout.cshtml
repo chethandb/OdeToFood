@@ -49,6 +49,8 @@
         @RenderBody()
         <hr />
         <footer>
+            <!-- this tells the tag helper to go out and serach for view component named restaurant-count -->
+            <vc:restaurant-count></vc:restaurant-count>
             @RenderSection("footer", required: false)
             <p>&copy; 2021 - OdeToFood</p>
         </footer>

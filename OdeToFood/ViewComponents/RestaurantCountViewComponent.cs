@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace OdeToFood.ViewComponents
 {
-    public class RestaurantViewComponent : ViewComponent
+    public class RestaurantCountViewComponent : ViewComponent
     {
         private readonly IRestaurantData restaurantData;
 
-        public RestaurantViewComponent(IRestaurantData restaurantData)
+        public RestaurantCountViewComponent(IRestaurantData restaurantData)
         {
             this.restaurantData = restaurantData;
         }

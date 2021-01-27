@@ -49,3 +49,13 @@ Scott's OdeToFood ASP.NET CORE
 - Implementing a Data Access Service
 - Saving and Commiting Data
 - Modifying the Service Registration
+
+## Module 5 - Building the User Interface
+- Using Razor Layout Pages and Sections
+- Implementing a Delete Restaurant Page Model
+- Implementing the Delete Markup
+- Using _ViewImports and _ViewStart Files
+- Reusing Markup with Partial Views
+- Rendering Partial Views
+- Implementing a ViewComponent
+- Rendering a ViewComponent

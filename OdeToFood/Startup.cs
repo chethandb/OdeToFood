@@ -36,7 +36,8 @@ namespace OdeToFood
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddRazorPages();            
+            services.AddRazorPages();
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +62,7 @@ namespace OdeToFood
             app.UseEndpoints(endPoints =>
             {
                 endPoints.MapRazorPages();
+                endPoints.MapControllers();
             });
         }
     }

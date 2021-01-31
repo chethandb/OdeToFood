@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OdeToFood.Data;
+using System;
 
 namespace OdeToFood
 {
@@ -55,6 +56,7 @@ namespace OdeToFood
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseNodeModules(maxAge: TimeSpan.FromSeconds(600));
             app.UseCookiePolicy();
 
             app.UseRouting();

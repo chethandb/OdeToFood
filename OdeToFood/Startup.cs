@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OdeToFood.Data;
+using System;
 
 namespace OdeToFood
 {
@@ -36,7 +37,8 @@ namespace OdeToFood
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddRazorPages();            
+            services.AddRazorPages();
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +56,7 @@ namespace OdeToFood
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseNodeModules(maxAge: TimeSpan.FromSeconds(600));
             app.UseCookiePolicy();
 
             app.UseRouting();
@@ -61,6 +64,7 @@ namespace OdeToFood
             app.UseEndpoints(endPoints =>
             {
                 endPoints.MapRazorPages();
+                endPoints.MapControllers();
             });
         }
     }

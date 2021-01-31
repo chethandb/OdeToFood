@@ -60,7 +60,7 @@ Scott's OdeToFood ASP.NET CORE
 - Implementing a ViewComponent
 - Rendering a ViewComponent
 
-## Module6 - Integrating Client-side JavaScript and CSS
+## Module 6 - Integrating Client-side JavaScript and CSS
 - Serving Static Files and Content from wwwroot
 - Using ASP.NET Core Environments
 - Enforcing Validation on the Client

@@ -59,3 +59,15 @@ Scott's OdeToFood ASP.NET CORE
 - Rendering Partial Views
 - Implementing a ViewComponent
 - Rendering a ViewComponent
+
+## Module6 - Integrating Client-side JavaScript and CSS
+- Serving Static Files and Content from wwwroot
+- Using ASP.NET Core Environments
+- Enforcing Validation on the Client
+- Loading Restaurants from the Client
+- Implementing an API Controller
+- Using DataTables
+- Managing Client Libraries Using npm and NodeJS
+- Managing Production Scripts and Development Scripts
+- Serving Files from the node_modules Directory
+- Creating Sortable, Searchable Data Grids with DataTables

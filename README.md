@@ -71,3 +71,10 @@ Scott's OdeToFood ASP.NET CORE
 - Managing Production Scripts and Development Scripts
 - Serving Files from the node_modules Directory
 - Creating Sortable, Searchable Data Grids with DataTables
+
+## Module 7 - Working with the Internals of ASP.NET Core
+- Exploring the Application Entry Point
+- Exploring the Application Middleware
+- Building Custom Middleware
+- Logging Application Messages
+- Configuring the App Using the Default Web Host Builder
